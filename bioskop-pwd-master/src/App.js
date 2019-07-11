@@ -6,6 +6,7 @@ import MovieDetail from './pages/movieDetail'
 import Register from './pages/register'
 import SeatRes from './pages/seatReservation'
 import PageNotFound from './pages/admin/PageNotFound'
+import Cart from './pages/Cart'
 
 import { Route } from 'react-router-dom'
 
@@ -23,7 +24,7 @@ class App extends React.Component {
     if(username !== null){
       Axios.get(ApiUrl + '/users?username=' + username)
       .then((res) => {
-        console.log(res.data)
+        // console.log(res.data)
         this.props.OnRegisterSuccess(res.data[0])
       })
     }
@@ -43,6 +44,7 @@ class App extends React.Component {
         <Route path='/login' component={Login} />
         <Route path='/order-seat' component={SeatRes} />
         <Route path='/not-found' component={PageNotFound} />
+        <Route path='/cart' component={Cart} />
       </div>
     );
   }

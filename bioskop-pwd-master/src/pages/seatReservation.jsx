@@ -4,18 +4,23 @@ import PageNotFound from './../pages/admin/PageNotFound'
 import Axios from 'axios';
 import { ApiUrl } from '../supports/ApiURl';
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
+import Cart from './Cart'
 
 class SeatRes extends Component {
     state ={
         chosen : [],
-        booked : []
+        booked : [],
+        toCart : false,
+        data : []
     }
     
     componentDidMount = () => {
         Axios.get(ApiUrl + '/movies/' + this.props.location.state.id)
         .then((res) => {
             this.setState({
-                booked: res.data.booked
+                booked: res.data.booked,
+                data: res.data
             })
         })
         .catch((err) => {
@@ -38,9 +43,9 @@ class SeatRes extends Component {
     renderSeat = () => {
         var {seats} = this.props.location.state
         var arr = []
-        for(var i = 0 ; i< seats/20 ; i++){
+        for(var i = 0 ; i < seats/ 20 ; i++){
             arr.push([])
-            for(var j = 0 ; j < seats/ (seats/20); j++){
+            for(var j = 0 ; j < seats / (seats/20); j++){
                 arr[i].push(1)
             }
         }
@@ -51,6 +56,7 @@ class SeatRes extends Component {
         for(var i = 0 ; i< this.state.chosen.length; i++){
             arr[this.state.chosen[i][0]][this.state.chosen[i][1]] = 3
         }
+
         var alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
         var jsx = arr.map((val,index) => {
             return(
@@ -116,10 +122,10 @@ class SeatRes extends Component {
                     transaction : transaction
                 })
                 .then((res) => {
-                    alert('masuk')
                     this.setState({
                         booked: [...this.state.booked, ...this.state.chosen],
-                        chosen: []
+                        chosen: [],
+                        toCart : true
                     })
                 })
             })
@@ -130,10 +136,15 @@ class SeatRes extends Component {
         // lalu post ke users
     }
     render() {
-        console.log(this.props.location.state)
+        // console.log(this.props.location.state)
         if(this.props.location.state === undefined){
             return(
                 <PageNotFound />
+            )
+        }
+        if(this.state.toCart === true){
+            return (
+                <Redirect to={{pathname: './cart' , state: this.state.data}} />
             )
         }
         return (
@@ -168,5 +179,5 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(SeatRes)
+export default connect(mapStateToProps)(SeatRes);
 

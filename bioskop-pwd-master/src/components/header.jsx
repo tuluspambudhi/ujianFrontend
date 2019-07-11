@@ -32,13 +32,16 @@ class Example extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
-           <Link to='/'> <NavbarBrand>MoviePass</NavbarBrand> </Link>
+        <Navbar expand="md">
+          <Link to='/'> <NavbarBrand>MoviePass</NavbarBrand> </Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
                <Link to='/register'> <NavLink>JOIN NOW</NavLink></Link>
+              </NavItem>
+              <NavItem>
+               <Link to='/cart'> <NavLink>Cart</NavLink></Link>
               </NavItem>
               
               {

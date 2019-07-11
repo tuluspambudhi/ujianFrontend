@@ -49,8 +49,8 @@ class MovieList extends React.Component{
         return(
             <div className='container mt-5'>
                 { this.props.username !== ""?
-                <div className='alert alert-success'>
-                    Hello , Welocome Back, {this.props.username}
+                <div className='alert'>
+                    WELCOME BACK, {this.props.username.toUpperCase()}
                 </div>: null
                 }   
                 <div className='row justify-content-center'>
