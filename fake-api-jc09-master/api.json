@@ -1,0 +1,221 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "tulus",
+      "password": "password",
+      "transaction": [
+        {
+          "title": "TOY STORY 4",
+          "qty": 3,
+          "total": 105000
+        },
+        {
+          "title": "TOY STORY 4",
+          "qty": 2,
+          "total": 70000
+        },
+        {
+          "title": "TOY STORY 4",
+          "qty": 3,
+          "total": 105000
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "username": "sainrama",
+      "password": "gametag",
+      "transaction": []
+    }
+  ],
+  "movies": [
+    {
+      "title": "ANNABELLE COMES HOME",
+      "sutradara": "Gary Budwick",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/156074568118284_452x647.jpg",
+      "genre": "Horror",
+      "playingAt": [
+        "9",
+        "14",
+        "20"
+      ],
+      "duration": "106",
+      "sinopsis": "Pasangan suami istri Ed Warren (Patrick Wilson) dan Lorraine Warren (Vera Farmiga) sepakat untuk meletakkan boneka Annabelle di ruang khusus mereka. Dibalik lemari kaca suci dan mendapat berkat dari seorang pendeta.Namun malapetaka datang saat Annabelle membangunkan roh-roh jahat yang ada di ruangan itu. Putri pasangan ini, Judy Warren (Mckenna Grace) dan temannya menjadi target teror baru Annabelle dan iblis jahat lainnya.",
+      "id": 1,
+      "seats": 100,
+      "booked": [
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "seats": 100,
+      "booked": [
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "title": "TOY STORY 4",
+      "genre": "Animation",
+      "sinopsis": "Woody, Buzz Lightyear, dan anggota geng lainnya memulai perjalanan dengan Bonnie dan mainan baru bernama Forky.Perjalanan yang penuh petualangan berubah menjadi reuni yang tak terduga ketika Woody bertemu dengan Bo Peep.Sebuah perjalanan bersama teman-teman lama dan baru mengungkapkan dunia sangatlah besar untuk sebuah mainan.",
+      "playingAt": [
+        9,
+        20
+      ],
+      "duration": 100,
+      "sutradara": "Josh Cooley",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/155929906195254_452x647.jpg"
+    },
+    {
+      "id": 3,
+      "seats": 80,
+      "booked": [
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "title": "ANNA",
+      "genre": "Action",
+      "sinopsis": "Di balik keanggunan Anna Poliatova (Sasha Luss) terdapat sebuah rahasia. Model cantik ini adalah senjata yang sangat mematikan.Kemampuannya membunuh di lapangan menjadikan Anna salah satu agen rahasia yang paling ditakuti.",
+      "playingAt": [
+        9
+      ],
+      "duration": 118,
+      "sutradara": "Luc Besson",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/155866895248609_300x430.jpg"
+    },
+    {
+      "id": 4,
+      "title": "YESTERDAY",
+      "genre": "Comedy",
+      "sinopsis": "Apa jadinya jika semua orang di dunia tidak mengenal The Beatles? Jack Malik (Himesh Patel) adalah seorang musisi yang sedang berjuang mewujudkan mimpinya. Suatu hari ia memainkan lagu Yesterday karya The Beatles. Namun teman-teman yang mendengarkan Jack tidak mengetahui lagu tersebut.Jack dikisahkan sebagai satu-satunya orang di dunia yang mengingat karya-karya The Beatles.",
+      "playingAt": [
+        20
+      ],
+      "duration": 116,
+      "sutradara": "Danny Boyle",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/156022895488927_300x430.jpg"
+    },
+    {
+      "id": 5,
+      "seats": 100,
+      "booked": [],
+      "title": "KOKI-KOKI CILIK 2",
+      "genre": "Family",
+      "sinopsis": "Libur telah tiba artinya Cooking Camp akan kembali dibuka. Bima, Alfa, Kevin, Niki, Mely dan Key datang ke camp dengan niat reuni malah dikejutkan bahwa camp sudah tutup. Ini semua berawal dari omongan Evan, mantan Chef terkenal, yang meragukan kredibilitas Grant sebagai pengajar di camp. Sementara keluarga besar Pak Malik ingin menjual lahan camp. Grant yang terpuruk kemudian dihibur anak-anak agar mau membuka Cooking Camp lagi. Mereka mempunyai ide untuk menjual makanan di food truck agar bisa mengumpulkan modal camp. Usaha mereka dibantu oleh Tante Adel dan Adit, keponakan Adel yang lucu sekaligus pemurung sejak kematian Mamanya. Konflik bermunculan ketika menjual makanan tidak segampang yang mereka kira. Ditambah sandwich buatan Adit dituduh hasil jiplakan restoran yang dikelola oleh Evan yang ternyata adalah alumni Cooking Camp angkatan pertama. Kini anak-anak harus bersatu dan bekerja keras untuk mempertahankan Cooking Camp.",
+      "playingAt": [
+        9,
+        20
+      ],
+      "duration": 91,
+      "sutradara": "Viva Westi",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/155833340228800_300x430.jpg"
+    },
+    {
+      "id": 6,
+      "title": "SABYAN MENJEMPUT MIMPI",
+      "genre": "Musikal",
+      "sinopsis": "SABYAN, siapa yang ga kenal mereka sekarang. Bahkan grup music ini sangat populer di kalangan kaum milenial. Padahal genre music yang mereka bawa tidaklah biasa. GAMBUS.. ya Gambus musiknya. Di bawakan dengan penuh penghayatan oleh NISSA sang vokalis utama. Seorang gadis cantik dan kharismatik dengan suara yang khas berhasil menghipnotis orang yang mendengar musik SABYAN. Banyak yang ga tau, bagaimana mereka berkisah. Bagaimana anak anak muda yang di pimpin oleh AYUS ini bisa bersatu dalam satu nadi bernama GAMBUS. Banyak kisah kisah menarik di balik itu. Perjuangan AYUS, NISSA dan teman teman SABYAN dalam menggapai sebuah mimpi.",
+      "playingAt": [
+        9,
+        20
+      ],
+      "seats": 100,
+      "booked": [
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "duration": 94,
+      "sutradara": "Amin Ishaq",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/155842097061702_300x430.jpg"
+    },
+    {
+      "title": "SpiderMan : Far From Home",
+      "genre": "Action",
+      "sinopsis": "Following the events of Avengers: Endgame, Spider-Man must step up to take on new threats in a world that has changed forever.",
+      "playingAt": [
+        14
+      ],
+      "duration": "120",
+      "sutradara": "Jon Watts",
+      "image": "https://i0.wp.com/www.nerdsandbeyond.com/wp-content/uploads/2019/05/image1-1-1.jpeg",
+      "id": 7,
+      "seats": 100,
+      "booked": []
+    },
+    {
+      "title": "Angry Birds 2",
+      "genre": "Cartoon",
+      "sinopsis": "Red, Chuck, Bomb and the rest of their feathered friends are surprised when a green pig suggests that they put aside their differences and unite to fight a common threat. Aggressive birds from an island covered in ice are planning to use an elaborate weapon to destroy the fowl and swine way of life. After picking their best and brightest, the birds and pigs come up with a scheme to infiltrate the island, deactivate the device and return to their respective paradises intact.",
+      "playingAt": [
+        9,
+        14,
+        16
+      ],
+      "duration": "90",
+      "sutradara": "Thurop Van Orman",
+      "image": "http://cdn.collider.com/wp-content/uploads/2019/02/angry-birds-movie-2-red-poster.jpg",
+      "id": 8
+    }
+  ]
+}
