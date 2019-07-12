@@ -6,26 +6,41 @@
       "password": "password",
       "transaction": [
         {
-          "title": "TOY STORY 4",
-          "qty": 3,
-          "total": 105000
-        },
-        {
-          "title": "TOY STORY 4",
+          "title": "ANNABELLE COMES HOME",
           "qty": 2,
           "total": 70000
         },
         {
-          "title": "TOY STORY 4",
-          "qty": 3,
-          "total": 105000
+          "title": "Under The Silver Lake",
+          "qty": 4,
+          "total": 140000
+        },
+        {
+          "title": "Angry Birds 2",
+          "qty": 1,
+          "total": 35000
+        },
+        {
+          "title": "YESTERDAY",
+          "qty": 2,
+          "total": 70000
+        },
+        {
+          "title": "SpiderMan : Far From Home",
+          "qty": 6,
+          "total": 210000
+        },
+        {
+          "title": "ANNA",
+          "qty": 4,
+          "total": 140000
         }
       ]
     },
     {
       "id": 2,
-      "username": "sainrama",
-      "password": "gametag",
+      "username": "admin",
+      "password": "password",
       "transaction": []
     }
   ],
@@ -46,64 +61,27 @@
       "seats": 100,
       "booked": [
         [
-          2,
-          7
+          0,
+          0
         ],
         [
-          2,
-          8
+          0,
+          1
         ],
         [
-          2,
-          9
+          4,
+          18
         ],
         [
-          2,
-          11
-        ],
-        [
-          1,
-          5
-        ],
-        [
-          1,
-          6
-        ],
-        [
-          1,
-          7
+          4,
+          19
         ]
       ]
     },
     {
       "id": 2,
       "seats": 100,
-      "booked": [
-        [
-          2,
-          7
-        ],
-        [
-          2,
-          8
-        ],
-        [
-          2,
-          9
-        ],
-        [
-          0,
-          2
-        ],
-        [
-          0,
-          3
-        ],
-        [
-          0,
-          4
-        ]
-      ],
+      "booked": [],
       "title": "TOY STORY 4",
       "genre": "Animation",
       "sinopsis": "Woody, Buzz Lightyear, dan anggota geng lainnya memulai perjalanan dengan Bonnie dan mainan baru bernama Forky.Perjalanan yang penuh petualangan berubah menjadi reuni yang tak terduga ketika Woody bertemu dengan Bo Peep.Sebuah perjalanan bersama teman-teman lama dan baru mengungkapkan dunia sangatlah besar untuk sebuah mainan.",
@@ -120,12 +98,20 @@
       "seats": 80,
       "booked": [
         [
-          0,
-          10
+          1,
+          0
         ],
         [
-          0,
-          11
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
         ]
       ],
       "title": "ANNA",
@@ -148,7 +134,18 @@
       ],
       "duration": 116,
       "sutradara": "Danny Boyle",
-      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/156022895488927_300x430.jpg"
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/156022895488927_300x430.jpg",
+      "booked": [
+        [
+          4,
+          9
+        ],
+        [
+          4,
+          10
+        ]
+      ],
+      "seats": 100
     },
     {
       "id": 5,
@@ -166,30 +163,6 @@
       "image": "https://media.21cineplex.com/webcontent/gallery/pictures/155833340228800_300x430.jpg"
     },
     {
-      "id": 6,
-      "title": "SABYAN MENJEMPUT MIMPI",
-      "genre": "Musikal",
-      "sinopsis": "SABYAN, siapa yang ga kenal mereka sekarang. Bahkan grup music ini sangat populer di kalangan kaum milenial. Padahal genre music yang mereka bawa tidaklah biasa. GAMBUS.. ya Gambus musiknya. Di bawakan dengan penuh penghayatan oleh NISSA sang vokalis utama. Seorang gadis cantik dan kharismatik dengan suara yang khas berhasil menghipnotis orang yang mendengar musik SABYAN. Banyak yang ga tau, bagaimana mereka berkisah. Bagaimana anak anak muda yang di pimpin oleh AYUS ini bisa bersatu dalam satu nadi bernama GAMBUS. Banyak kisah kisah menarik di balik itu. Perjuangan AYUS, NISSA dan teman teman SABYAN dalam menggapai sebuah mimpi.",
-      "playingAt": [
-        9,
-        20
-      ],
-      "seats": 100,
-      "booked": [
-        [
-          0,
-          10
-        ],
-        [
-          0,
-          11
-        ]
-      ],
-      "duration": 94,
-      "sutradara": "Amin Ishaq",
-      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/155842097061702_300x430.jpg"
-    },
-    {
       "title": "SpiderMan : Far From Home",
       "genre": "Action",
       "sinopsis": "Following the events of Avengers: Endgame, Spider-Man must step up to take on new threats in a world that has changed forever.",
@@ -201,7 +174,32 @@
       "image": "https://i0.wp.com/www.nerdsandbeyond.com/wp-content/uploads/2019/05/image1-1-1.jpeg",
       "id": 7,
       "seats": 100,
-      "booked": []
+      "booked": [
+        [
+          4,
+          9
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          2,
+          9
+        ]
+      ]
     },
     {
       "title": "Angry Birds 2",
@@ -215,7 +213,46 @@
       "duration": "90",
       "sutradara": "Thurop Van Orman",
       "image": "http://cdn.collider.com/wp-content/uploads/2019/02/angry-birds-movie-2-red-poster.jpg",
-      "id": 8
+      "id": 8,
+      "seats": 100,
+      "booked": [
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    {
+      "title": "Under The Silver Lake",
+      "genre": "Horror",
+      "sinopsis": "Sam is a disenchanted 33-year-old who discovers a mysterious woman, Sarah, frolicking in his apartment's swimming pool. When she vanishes, Sam embarks on a surreal quest across Los Angeles to decode the secret behind her disappearance, leading him into the murkiest depths of mystery, scandal, and conspiracy in the City of Angels.",
+      "playingAt": [
+        9,
+        14
+      ],
+      "duration": "90",
+      "sutradara": "David Mitchell",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTQ4ZjlhMDYtZTk5Ni00ZGMxLWJlMWMtOTNjZDA0Mzc0OTI5XkEyXkFqcGdeQXVyNjUxMzg2Mzk@._V1_.jpg",
+      "seats": 100,
+      "booked": [
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "id": 9
     }
   ]
 }
