@@ -15,16 +15,38 @@ import { ApiUrl } from '../supports/ApiURl';
 // apabila berhasil login, taruh data di global state, dan username di localStorage
 
 class Login extends Component {
+    state = {
+        kosong: false,
+        salahSatuKosong: false
+    }
+    firstAlert = () => {
+        return (
+            <div class="alert alert-danger" role="alert">
+                        Tidak Boleh Kosong
+            </div>
+        )
+    }
+    secondAlert = () => {
+        return (
+            <div class="alert alert-danger" role="alert">
+                        Username atau Password Anda Salah
+            </div>
+        )
+    }
     onBtnLoginClick = () => {
         var name = this.refs.username.value
         var pass = this.refs.password.value
         if(name === '' || pass ===''){
-            alert('Semua Form Harus Terisi')
+           this.setState({
+               kosong: true
+           })
         }else{
             Axios.get(ApiUrl + '/users?username=' + name + '&password=' + pass)
             .then((res) => {
                 if(res.data.length === 0){
-                    alert('Password or Username Invalid')
+                   this.setState({
+                       salahSatuKosong: true
+                   })
                 }else{
                     this.props.OnRegisterSuccess(res.data[0])
                     localStorage.setItem('terserah' , name)
@@ -48,8 +70,10 @@ class Login extends Component {
                 <div className='col-md-6'>
                     <Paper className='p-5'>
                     <h1> LOGIN </h1>
+                    {this.state.kosong === true ? this.firstAlert() : ''}
+                    {this.state.salahSatuKosong === true ? this.secondAlert() : ''}
                     <input ref='username' className='form-control mt-3' type='text' placeholder='username' />
-                    <input ref='password' className='form-control mt-3' type='text' placeholder='password' />
+                    <input ref='password' className='form-control mt-3' type='password' placeholder='password' />
                     <input onClick={this.onBtnLoginClick} type='button' className='btn btn-primary mt-5' value='Login' />
                     </Paper>
                     <p className='mt-3' style={{fontStyle:'italic'}}>

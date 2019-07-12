@@ -8,6 +8,7 @@ import SeatRes from './pages/seatReservation'
 import PageNotFound from './pages/admin/PageNotFound'
 import Cart from './pages/Cart'
 import History from './pages/History'
+import GantiPassword from './pages/admin/GantiPassword'
 
 import { Route } from 'react-router-dom'
 
@@ -47,6 +48,7 @@ class App extends React.Component {
         <Route path='/not-found' component={PageNotFound} />
         <Route path='/cart' component={Cart} />
         <Route path='/history' component={History} />
+        <Route path='/ganti-password' component={GantiPassword} />
       </div>
     );
   }

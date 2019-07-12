@@ -5,7 +5,6 @@ import Axios from 'axios';
 import { ApiUrl } from '../supports/ApiURl';
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
-import Cart from './Cart'
 
 class SeatRes extends Component {
     state ={

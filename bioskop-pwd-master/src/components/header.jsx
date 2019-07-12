@@ -14,13 +14,11 @@ import {
 import {connect} from 'react-redux'
 import {onLogout} from './../redux/actions'
 import { Link } from 'react-router-dom'
-import { Redirect } from 'react-router-dom'
 
 
 class Example extends React.Component {
   state = {
-      isOpen : false,
-      toHome : false 
+      isOpen : false
   }
   toggle = () => {
     this.setState({
@@ -30,24 +28,16 @@ class Example extends React.Component {
   onBtnLogoutClick = () => {
     this.props.onLogout()
     localStorage.removeItem('terserah')
-    this.setState({
-      toHome: true
-    })
   }
   render() {
-    if(this.state.toHome === true){
-      return (
-          <Redirect to={{pathname: '/' , state: this.state.data}} />
-      )
-    }
     return (
       <div>
         <Navbar expand="md">
-          <Link to='/'> <NavbarBrand>MoviePass</NavbarBrand> </Link>
+          <Link to='/'> <NavbarBrand>MoviePass</NavbarBrand></Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              { this.props.name !== "" ? 
+              { this.props.name !== "" && this.props.name !== "admin"? 
               <NavItem>
                 <Link to='/cart'> <NavLink>Cart {this.props.transaction.length}</NavLink></Link>
               </NavItem> : null
@@ -55,7 +45,14 @@ class Example extends React.Component {
               {
                 this.props.name === "" ?
                 <NavItem>
-                  <Link to='/register'> <NavLink>JOIN NOW</NavLink></Link>
+                  <Link to='/login'> <NavLink>Login</NavLink></Link>
+                </NavItem> : null
+              }
+
+              {
+                this.props.name === "admin" ?
+                <NavItem>
+                  <Link to='/manage'> <NavLink>Manage Movie</NavLink></Link>
                 </NavItem> : null
               }
               
@@ -75,7 +72,7 @@ class Example extends React.Component {
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem onClick={this.onBtnLogoutClick}>
-                    Logout
+                    <Link to='/'>Logout</Link>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>

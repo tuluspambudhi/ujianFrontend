@@ -19,11 +19,11 @@ class Cart extends Component {
         Axios.get(ApiUrl + '/users/' + this.props.id)
         .then((res) => {
             this.setState({
-                transaction: res.data.transaction, totalTrans : res.data.transaction.length
+                transaction: res.data.transaction
             })
         })
         .catch((err) => {
-
+            
         })
     }
     movieTitle = (arr) => {
@@ -42,7 +42,7 @@ class Cart extends Component {
                 <tr>
                     <td>{mv.title}</td>
                     <td>{mv.qty}</td>
-                    <td>{Numeral(mv.total).format(0,0)}</td>
+                    <td>Rp.{Numeral(mv.total).format(0,0)}</td>
                 </tr>
             )
         })
@@ -62,8 +62,8 @@ class Cart extends Component {
             return(
                 <tr>
                     <td></td>
-                    <td>Totale Boss</td>
-                    <td>{tt.total}</td>
+                    <td>Total:</td>
+                    <td>Rp.{Numeral(tt.total).format(0,0)}</td>
                 </tr>
             )
         })
@@ -92,6 +92,7 @@ class Cart extends Component {
                 <Redirect to={{pathname: '/' , state: this.state.data}} />
             )
         }
+        // console.log(this.movieTitle(this.state.transaction))
         return (
             <div>
             <Table dark className='cartTable'>
