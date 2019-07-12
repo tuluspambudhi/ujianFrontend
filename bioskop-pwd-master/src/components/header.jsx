@@ -14,12 +14,14 @@ import {
 import {connect} from 'react-redux'
 import {onLogout} from './../redux/actions'
 import { Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
+
 
 class Example extends React.Component {
   state = {
-      isOpen : false
+      isOpen : false,
+      toHome : false 
   }
-  
   toggle = () => {
     this.setState({
       isOpen: !this.state.isOpen
@@ -28,8 +30,16 @@ class Example extends React.Component {
   onBtnLogoutClick = () => {
     this.props.onLogout()
     localStorage.removeItem('terserah')
+    this.setState({
+      toHome: true
+    })
   }
   render() {
+    if(this.state.toHome === true){
+      return (
+          <Redirect to={{pathname: '/' , state: this.state.data}} />
+      )
+    }
     return (
       <div>
         <Navbar expand="md">
@@ -37,12 +47,17 @@ class Example extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+              { this.props.name !== "" ? 
               <NavItem>
-               <Link to='/register'> <NavLink>JOIN NOW</NavLink></Link>
-              </NavItem>
-              <NavItem>
-               <Link to='/cart'> <NavLink>Cart</NavLink></Link>
-              </NavItem>
+                <Link to='/cart'> <NavLink>Cart {this.props.transaction.length}</NavLink></Link>
+              </NavItem> : null
+              }
+              {
+                this.props.name === "" ?
+                <NavItem>
+                  <Link to='/register'> <NavLink>JOIN NOW</NavLink></Link>
+                </NavItem> : null
+              }
               
               {
               this.props.name !== ""
@@ -77,7 +92,8 @@ class Example extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    name : state.user.username
+    name : state.user.username,
+    transaction: state.user.transaction
   }
 }
 

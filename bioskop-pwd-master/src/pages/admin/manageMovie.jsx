@@ -77,7 +77,7 @@ class ManageMovie extends React.Component{
            }
         else{
             var data = {
-                title, sutradara,image,genre,playingAt,duration,sinopsis
+                title,sutradara,image,genre,playingAt,duration,sinopsis
             }
             Axios.put('http://localhost:2000/movies/' +this.state.selectedEdit ,data )
             .then((res)=>{
@@ -172,6 +172,8 @@ class ManageMovie extends React.Component{
             var imageLink = this.refs.imageLink.value
             var duration = this.refs.duration.value
             var sinopsis = this.refs.sinopsis.value
+            var seats = 100
+            var booked = []
 
             var data = {
                 title : title,
@@ -180,7 +182,9 @@ class ManageMovie extends React.Component{
                 playingAt,
                 duration,
                 sutradara,
-                image : imageLink
+                image : imageLink,
+                seats : 100,
+                booked : []
             }
             if(title !== '' &&
                sutradara !== '' &&
@@ -188,7 +192,10 @@ class ManageMovie extends React.Component{
                genre !== '' && 
                imageLink !== '' && 
                duration > 0 && 
-               sinopsis !== '' )
+               sinopsis !== '' &&
+               seats !== 0 &&
+               booked !== 0
+               )
                {
                    Axios.post('http://localhost:2000/movies' , data )
                    .then((res) => {

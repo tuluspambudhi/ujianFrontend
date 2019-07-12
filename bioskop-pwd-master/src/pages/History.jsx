@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class historyTransaction extends Component {
+class History extends Component {
     render(){
         return(
             <div>
@@ -10,4 +10,4 @@ class historyTransaction extends Component {
     }
 }
 
-export default historyTransaction;
+export default History;
